@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hal Jordan</title>
+  <style type="text/css">
+
+  html {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .parallax {
+    height: 100vh;
+    perspective: 2px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }  
+
+  .section {
+    position: relative;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .parallax__layer::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+
+    z-index: -1;
+  }
+
+  .parallax__layer__bg:after {
+    background-image: url('http://www.exposureguide.com/images/cityscape-photography-tips/photographing-cityscapes-2e.jpg');
+    background-repeat: no-repeat;
+  }
+
+  .parallax__layer__fg {
+  }
+ 
+  </style>
+  </head>
+  <body>
+
+    <div class="parallax">
+      <div class="section parallax__layer parallax__layer__bg">
+        <h1>WAT?</h1>
+        <!-- img src="http://www.exposureguide.com/images/cityscape-photography-tips/photographing-cityscapes-2e.jpg" / -->
+      </div>
+      <div class="section">
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      </div>
+      <div class="section parallax__layer">
+        <h1>This is the front</h1>
+      </div>
+      <div class="section">
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod.</p>
+        <p>Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      </div>
+      <div class="section parallax__layer">
+        <h1>This is the bottom</h1>
+      </div>
+  
+  </body>
+</html>
